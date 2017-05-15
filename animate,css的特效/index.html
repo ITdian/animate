@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特效效果</title>
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<button id="btn">登录</button>
+<div id="test"></div>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script>
+    $(function () {
+            $('#btn').on('click',function () {
+                $('#test').addClass('animated infinite fadeIn');
+                setTimeout(function () {
+                    $('#test').removeClass('fadeIn').addClass('bounceOut');
+                },1000)
+            })
+    })
+</script>
+</body>
+</html>
